@@ -116,6 +116,7 @@ class AutoSyntaxHighlight(sublime_plugin.EventListener):
     def autodetect(self, view):
         if is_robot_format(view):
             view.set_syntax_file(os.path.join(plugin_dir, "robot.tmLanguage"))
+            print view.settings()
 
     def on_load(self, view):
         if view.id() in views_to_center:

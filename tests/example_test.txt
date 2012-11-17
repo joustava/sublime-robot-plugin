@@ -1,0 +1,23 @@
+***Settings***
+Library  ExampleLibrary
+Library  OperatingSystem
+
+
+***Test Cases***
+Simple Test
+  Simple Keyword
+  Greet    Robot Framework
+  Greet    World
+
+Returning Value
+  ${result}=  Multiply By Two  4.1
+  Numbers Should Be Equal  ${result}  8.2
+
+Failing Test
+  Numbers Should Be Equal  2  2
+  Numbers Should Be Equal  2  3
+
+Plugin Should Detect Robot Format
+    ${content}=  Get File    example_test.txt
+    Syntax Is Robot Format  ${content}
+
