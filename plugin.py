@@ -34,6 +34,7 @@ def parse_file(suite):
 
 views_to_center = {}
 
+
 def openKeywordFile(window, keyword):
     source_path = keyword.source
     new_view = window.open_file("%s:%d" % (source_path, keyword.linenumber), sublime.ENCODED_POSITION)
