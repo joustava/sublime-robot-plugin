@@ -21,4 +21,3 @@ Plugin Should Detect Robot Format
     ${content}=  Get File    example_test.txt
     Syntax Is Robot Format  ${content}
 
-

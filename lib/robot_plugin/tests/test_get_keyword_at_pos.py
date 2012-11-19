@@ -1,5 +1,5 @@
 import unittest
-import keyword_parse
+from keyword_parse import get_keyword_at_pos
 
 class TestGetKeywordAtPos(unittest.TestCase):
     def test_edges(self):
@@ -11,7 +11,7 @@ class TestGetKeywordAtPos(unittest.TestCase):
         for i in range(0, 4):
             self.assertEqual(get_keyword_at_pos('A B', i), 'A B')
         self.assertEqual(get_keyword_at_pos('   A', 4), 'A')
-        assertEqual(get_keyword_at_pos('A   ', 0), 'A')
+        self.assertEqual(get_keyword_at_pos('A   ', 0), 'A')
 
     def test_splitting(self):
         self.assertEqual(get_keyword_at_pos('ABC  DEF', 1), 'ABC')

@@ -1,4 +1,3 @@
-
 def get_keyword_at_pos(line, col):
     length = len(line)
 
